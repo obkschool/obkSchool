@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>من نحن - فريق العمل</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="nav-container">
+      <div class="school-logo">
+        <a href="../index.html">مدرسة عمر بن الخطاب الثانوية</a>
+      </div>
+      <nav class="nav-links">
+        <a href="../index.html" class="nav-link">
+          <span class="material-symbols-rounded icon">home</span>
+          <span>الرئيسية</span>
+        </a>
+        <a href="../essay-assist/essay.html" class="nav-link">
+          <span class="material-symbols-rounded icon">edit_document</span>
+          <span>محرر النصوص</span>
+        </a>
+        <a href="../talk-to-me/talk.html" class="nav-link">
+          <span class="material-symbols-rounded icon">mic</span>
+          <span>تحدث معي</span>
+        </a>
+        <a href="index.html" class="nav-link active">
+          <span class="material-symbols-rounded icon">group</span>
+          <span>من نحن</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="about-container">
+    <div class="about-header">
+      <h1>فريق العمل</h1>
+      <p>تعرف على الفريق الذي قام بتطوير هذا المشروع</p>
+    </div>
+
+    <!-- تعديل موضع تعليمات اللعبة لتكون في الأعلى يمينًا -->
+    <div class="game-instructions top-right">
+      <span class="material-symbols-rounded">touch_app</span>
+      <p>انقر على البطاقات للتعرف على أعضاء الفريق</p>
+    </div>
+
+    <!-- تعديل ترتيب البطاقات -->
+    <div class="game-team-container">
+      <!-- الصف الأول: عمر، سامي، حسن -->
+      <div class="row-container top-row">
+        <!-- عمر -->
+        <div class="game-card" data-member="omar">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-avatar">
+                <span class="material-symbols-rounded">lightbulb</span>
+              </div>
+              <h2>عمر</h2>
+              <h3>صاحب الفكرة</h3>
+            </div>
+            <div class="card-back">
+              <p>تعود فكرة المشروع إليه، حيث استلهمها من اقتراحات الفريق، ثم عمل على إعداد التقرير بمساعدة إبراهيم، وساهم في جمع المعلومات اللازمة للمشروع.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- سامي -->
+        <div class="game-card" data-member="sami">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-avatar">
+                <span class="material-symbols-rounded">code</span>
+              </div>
+              <h2>سامي</h2>
+              <h3>مطور رئيسي</h3>
+            </div>
+            <div class="card-back">
+              <p>كان له الدور الأساسي في المشروع، حيث تولى إنشاء الموقع، وكتب أكواد البرمجة، كما قام بتصميم الموقع بالكامل.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- حسن -->
+        <div class="game-card" data-member="hassan">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-avatar">
+                <span class="material-symbols-rounded">manage_accounts</span>
+              </div>
+              <h2>حسن</h2>
+              <h3>منسق الفريق</h3>
+            </div>
+            <div class="card-back">
+              <p>كان مسؤولاً عن جمع المعلومات، بالإضافة إلى تنظيم الفريق وتوزيع الأدوار بين الأعضاء لضمان سير العمل بكفاءة.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- الصف الثاني: إبراهيم، عبدالله -->
+      <div class="row-container bottom-row">
+        <!-- إبراهيم -->
+        <div class="game-card" data-member="ibrahim">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-avatar">
+                <span class="material-symbols-rounded">fact_check</span>
+              </div>
+              <h2>إبراهيم</h2>
+              <h3>مدقق المعلومات</h3>
+            </div>
+            <div class="card-back">
+              <p>ساعد حسن في جمع المعلومات، وساهم في تدقيقها والتأكد من دقتها قبل استخدامها في التقرير والعرض التقديمي.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- عبدالله -->
+        <div class="game-card" data-member="abdullah">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-avatar">
+                <span class="material-symbols-rounded">slideshow</span>
+              </div>
+              <h2>عبدالله</h2>
+              <h3>مسؤول العرض التقديمي</h3>
+            </div>
+            <div class="card-back">
+              <p>كان دوره إعداد العرض التقديمي وترتيبه بطريقة منظمة، كما ساعد في تنظيم المعلومات داخل العرض التقديمي لضمان تقديمها بشكل واضح وجذاب.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-info">
+      <h2>عن المشروع</h2>
+      <p>تم تطوير هذا المشروع كجزء من مبادرة تعليمية في مدرسة عمر بن الخطاب الثانوية، بهدف توفير أدوات ذكاء اصطناعي تساعد الطلاب في تحسين مهاراتهم اللغوية والكتابية.</p>
+      <p>يتضمن المشروع ثلاث أدوات رئيسية: محادثة ذكية، محرر نصوص متقدم، ومحادثة صوتية تفاعلية.</p>
+    </div>
+  </main>
+
+  <div class="notification-center" id="notification-center"></div>
+
+  <!-- إزالة الدوائر وإضافة خلفية أفضل -->
+  <div class="blur-background"></div>
+
+  <!-- إضافة تأثير المطر الأرجواني -->
+  <div class="purple-rain" id="purple-rain"></div>
+
+  <script src="about.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // تطبيق تأثير انزلاق البطاقات
+      const memberCards = document.querySelectorAll('.member-card');
+      
+      // إضافة فئة خاصة للبطاقة الأولى (سامي)
+      if (memberCards.length > 0) {
+        memberCards[0].classList.add('featured');
+      }
+      
+      // إضافة متغير CSS لكل بطاقة لتحديد ترتيب الظهور
+      memberCards.forEach((card, index) => {
+        card.style.setProperty('--card-index', index);
+      });
+      
+      // تأثير المطر الأرجواني
+      const rainContainer = document.getElementById('purple-rain');
+      const raindropsCount = 100; // عدد قطرات المطر
+      
+      // إنشاء قطرات المطر
+      for (let i = 0; i < raindropsCount; i++) {
+        createRaindrop(rainContainer);
+      }
+      
+      // دالة إنشاء قطرة مطر
+      function createRaindrop(container) {
+        const raindrop = document.createElement('div');
+        raindrop.className = 'raindrop';
+        
+        // تعيين موقع عشوائي
+        const posX = Math.random() * 100;
+        raindrop.style.left = `${posX}%`;
+        
+        // تعيين حجم عشوائي
+        const size = Math.random() * 2 + 1;
+        raindrop.style.width = `${size}px`;
+        raindrop.style.height = `${size * 10}px`;
+        
+        // تعيين سرعة عشوائية
+        const duration = Math.random() * 5 + 3;
+        raindrop.style.animationDuration = `${duration}s`;
+        
+        // تعيين تأخير عشوائي
+        const delay = Math.random() * 5;
+        raindrop.style.animationDelay = `${delay}s`;
+        
+        // إضافة قطرة المطر إلى الحاوية
+        container.appendChild(raindrop);
+      }
+      
+      // تأثير تفاعلي للبطاقات عند التمرير
+      const observerOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.visibility = 'visible';
+            cardObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      memberCards.forEach(card => {
+        cardObserver.observe(card);
+      });
+    });
+  </script>
+</body>
+</html> 

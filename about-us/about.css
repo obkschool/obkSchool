@@ -1,0 +1,650 @@
+/* أنماط صفحة من نحن */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px 40px;
+  min-height: calc(100vh - 70px);
+  padding-top: 80px;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #3a7bd5, #6d5dff, #8c43ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+}
+
+.about-header p {
+  color: var(--subheading-color);
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* تحسين الخلفية */
+.blur-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(12, 15, 25, 0.95), rgba(20, 25, 40, 0.95));
+  z-index: -3;
+  overflow: hidden;
+}
+
+.blur-background::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(ellipse at 30% 40%, rgba(108, 99, 255, 0.15) 0%, rgba(16, 22, 35, 0) 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(140, 67, 255, 0.15) 0%, rgba(16, 22, 35, 0) 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(58, 123, 213, 0.1) 0%, rgba(16, 22, 35, 0) 60%);
+  animation: subtle-float 30s infinite alternate ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes subtle-float {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* تصميم معلومات المشروع */
+.project-info {
+  background: linear-gradient(145deg, rgba(30, 30, 45, 0.8), rgba(20, 20, 35, 0.8));
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.project-info h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #3a7bd5, #6d5dff, #8c43ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-info p {
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* تأثير المطر الأرجواني */
+.purple-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -2;
+}
+
+.raindrop {
+  position: absolute;
+  top: -50px;
+  background: linear-gradient(to bottom, rgba(108, 99, 255, 0), rgba(108, 99, 255, 0.3));
+  border-radius: 0 0 5px 5px;
+  animation: rain linear infinite;
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(calc(100vh + 50px));
+  }
+}
+
+/* تنسيق الإشعارات */
+.notification-center {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+}
+
+.notification {
+  background: rgba(30, 30, 45, 0.9);
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  animation: notification-in 0.3s forwards ease-out;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.notification.success {
+  border-left: 4px solid #4CAF50;
+}
+
+.notification.error {
+  border-left: 4px solid #F44336;
+}
+
+.notification.warning {
+  border-left: 4px solid #FFC107;
+}
+
+.notification.welcome {
+  border-left: 4px solid #6c63ff;
+}
+
+.notification.info {
+  border-left: 4px solid #2196F3;
+}
+
+.notification span {
+  font-size: 24px;
+}
+
+.notification.success span {
+  color: #4CAF50;
+}
+
+.notification.error span {
+  color: #F44336;
+}
+
+.notification.warning span {
+  color: #FFC107;
+}
+
+.notification.welcome span {
+  color: #6c63ff;
+}
+
+.notification.info span {
+  color: #2196F3;
+}
+
+.notification p {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.notification.fadeout {
+  animation: notification-out 0.3s forwards ease-in;
+}
+
+@keyframes notification-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes notification-out {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+/* تعديل تصميم حاوية البطاقات لدعم الصفوف */
+.game-team-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 30px 0 50px;
+  position: relative;
+}
+
+/* تصميم صفوف البطاقات */
+.row-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* تخصيص الصف العلوي */
+.top-row {
+  justify-content: space-around;
+}
+
+/* تخصيص الصف السفلي */
+.bottom-row {
+  justify-content: center;
+  gap: 50px;
+}
+
+.game-card {
+  position: relative;
+  width: 280px;
+  height: 380px;
+  border-radius: 20px;
+  perspective: 1000px;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.game-card:hover {
+  transform: translateY(-15px) !important;
+  box-shadow: 0 20px 40px rgba(108, 99, 255, 0.4);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.game-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front {
+  background: linear-gradient(145deg, rgba(30, 30, 45, 0.8), rgba(20, 20, 35, 0.8));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-back {
+  background: linear-gradient(145deg, rgba(25, 25, 40, 0.9), rgba(15, 15, 30, 0.9));
+  transform: rotateY(180deg);
+  padding: 35px 25px;
+  text-align: right;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+.card-avatar {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #3a7bd5, #6d5dff);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(108, 99, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.game-card:hover .card-avatar {
+  transform: scale(1.1);
+}
+
+.card-avatar span {
+  font-size: 45px;
+  color: white;
+}
+
+.game-card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #3a7bd5, #6d5dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.game-card h3 {
+  font-size: 1.3rem;
+  color: var(--subheading-color);
+  margin-bottom: 15px;
+}
+
+.game-card p {
+  color: var(--text-color);
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* إضافة تأثير الحدود المتوهجة */
+.game-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #3a7bd5, #6d5dff, #8c43ff, #3a7bd5);
+  z-index: -1;
+  border-radius: 22px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background-size: 400% 400%;
+  animation: gradient-border 3s ease infinite;
+}
+
+.game-card:hover::before {
+  opacity: 1;
+}
+
+@keyframes gradient-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* تعديل موضع تعليمات اللعبة */
+.game-instructions.top-right {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  color: var(--subheading-color);
+  font-size: 1rem;
+  opacity: 0.8;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* تحسين التصميم المتجاوب */
+@media (max-width: 1200px) {
+  .row-container {
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .bottom-row {
+    gap: 25px;
+  }
+  
+  .game-instructions.top-right {
+    position: relative;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-team-container {
+    gap: 30px;
+  }
+}
+
+/* تحسينات لتوافق الأجهزة المحمولة */
+
+/* تحسين الشريط العلوي للهاتف */
+@media (max-width: 768px) {
+  .app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(20, 20, 35, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .nav-container {
+    padding: 10px 15px;
+  }
+  
+  .school-logo a {
+    font-size: 0.9rem;
+  }
+  
+  .nav-links {
+    gap: 5px;
+  }
+  
+  .nav-link {
+    padding: 8px 10px;
+  }
+  
+  .nav-link span:not(.icon) {
+    display: none;
+  }
+  
+  .nav-link .icon {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  /* تعديل المساحة العلوية للمحتوى */
+  .about-container {
+    padding-top: 90px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  /* تحسين العناوين */
+  .about-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .about-header p {
+    font-size: 1rem;
+  }
+  
+  /* تحسين بطاقات الفريق */
+  .game-team-container {
+    margin-top: 50px;
+  }
+  
+  .row-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .game-card {
+    width: 100%;
+    max-width: 320px;
+    height: 360px;
+  }
+  
+  .card-front, .card-back {
+    padding: 25px 20px;
+  }
+  
+  .card-avatar {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .card-avatar span {
+    font-size: 35px;
+  }
+  
+  .game-card h2 {
+    font-size: 1.8rem;
+  }
+  
+  .game-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .game-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* تحسين معلومات المشروع */
+  .project-info {
+    padding: 20px 15px;
+  }
+  
+  .project-info h2 {
+    font-size: 1.8rem;
+  }
+  
+  .project-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* تحسين الإشعارات */
+  .notification-center {
+    left: 10px;
+    right: 10px;
+    max-width: calc(100% - 20px);
+  }
+  
+  .notification {
+    padding: 12px;
+  }
+  
+  .notification span {
+    font-size: 20px;
+  }
+  
+  .notification p {
+    font-size: 0.9rem;
+  }
+}
+
+/* تحسينات إضافية للشاشات الصغيرة جدًا (آيفون SE وما شابه) */
+@media (max-width: 375px) {
+  .about-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .game-card {
+    height: 340px;
+  }
+  
+  .card-front, .card-back {
+    padding: 20px 15px;
+  }
+  
+  .card-avatar {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .card-avatar span {
+    font-size: 30px;
+  }
+  
+  .game-card h2 {
+    font-size: 1.6rem;
+  }
+  
+  .game-card h3 {
+    font-size: 1rem;
+  }
+}
+
+/* تحسين تجربة اللمس */
+@media (hover: none) {
+  .game-card:hover {
+    transform: none !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  }
+  
+  .game-card:hover::before {
+    opacity: 0;
+  }
+  
+  .game-card:hover .card-avatar {
+    transform: none;
+  }
+  
+  .game-card:active {
+    transform: scale(0.98) !important;
+  }
+}
+
+/* تحسين الوضع الأفقي للهاتف */
+@media (max-width: 900px) and (orientation: landscape) {
+  .about-container {
+    padding-top: 80px;
+  }
+  
+  .game-team-container {
+    margin: 20px 0 30px;
+  }
+  
+  .row-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .game-card {
+    width: 250px;
+    height: 320px;
+  }
+  
+  .card-avatar {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .card-avatar span {
+    font-size: 30px;
+  }
+} 
